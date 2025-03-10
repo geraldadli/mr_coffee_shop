@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MR.COFFEE - Our Menu</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Menu Page CSS -->
+    <link rel="stylesheet" href="menu.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="site-nav">
+      <div class="container nav-inner">
+        <div class="nav-logo">
+          <a href="index.html" class="logo">
+            <img src="assets/mrcoffeelogo.jpeg" alt="Mr Coffee Logo" class="logo-img" />
+            Mr Coffee
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="rewards.html" class="nav-link">Rewards</a>
+          <a href="about_us.html" class="nav-link">About Us</a>
+          <a href="menu.html" class="nav-link active">Menu</a>
+          <a href="order.html" class="nav-button">Order Now</a>
+        </div>
+        <button id="mobile-menu-button" class="mobile-menu-btn">
+          <i class="ri-menu-line menu-icon"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="rewards.html" class="mobile-nav-link">Rewards</a>
+        <a href="about_us.html" class="mobile-nav-link">About Us</a>
+        <a href="menu.html" class="mobile-nav-link active">Menu</a>
+        <a href="order.html" class="mobile-nav-button">Order Now</a>
+      </div>
+    </div>
+
+    <!-- Menu Hero Section -->
+    <header class="menu-hero">
+      <div class="menu-hero-content container">
+        <h1 class="menu-hero-title">Explore Our Menu</h1>
+        <p class="menu-hero-subtitle">
+          From bold espressos to sweet pastries, we have something for everyone.
+        </p>
+      </div>
+    </header>
+
+    <!-- Filter Bar -->
+    <section class="menu-filter container">
+      <h2 class="filter-title">Browse by Category</h2>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">
+          <i class="ri-global-line"></i> All
+        </button>
+        <button class="filter-btn" data-category="espresso">
+          <i class="ri-cup-fill"></i> Espresso
+        </button>
+        <button class="filter-btn" data-category="frappe">
+          <i class="ri-ice-cream-line"></i> Frappe
+        </button>
+        <button class="filter-btn" data-category="brewed">
+          <i class="ri-water-flash-line"></i> Brewed
+        </button>
+        <button class="filter-btn" data-category="bread">
+          <i class="ri-bread-fill"></i> Bread
+        </button>
+      </div>
+    </section>
+
+    <!-- Menu Items -->
+    <section class="menu-items container">
+      <div class="items-grid">
+        <!-- Cappucino -->
+        <div class="menu-item" data-category="espresso" data-name="Cappuccino" data-price="4.50">
+          <img
+            src="/assets/cappucino.jpg"
+            alt="Cappuccino"
+          />
+          <div class="item-info">
+            <h3 class="item-title">Cappuccino</h3>
+            <p class="item-desc">
+              A classic espresso drink with steamed milk foam.
+            </p>
+            <button class="order-btn">Order Now</button>
+          </div>
+        </div>
+        <!-- Mochalatte -->
+        <div class="menu-item" data-category="espresso" data-name="Mochalatte" data-price="5.00">
+          <img
+            src="/assets/mochalatte.jpg"
+            alt="Mochalatte"
+          />
+          <div class="item-info">
+            <h3 class="item-title">Mochalatte</h3>
+            <p class="item-desc">
+              A rich and creamy espresso drink with chocolate and milk.
+            </p>
+            <button class="order-btn">Order Now</button>
+          </div>
+        </div>
+        <!-- Espresso 1 -->
+        <div class="menu-item" data-category="espresso" data-name="Classic Espresso" data-price="4.00">
+          <img
+            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+            alt="Classic Espresso"
+          />
+          <div class="item-info">
+            <h3 class="item-title">Classic Espresso</h3>
+            <p class="item-desc">
+              Rich and bold espresso made from freshly roasted beans.
+            </p>
+            <button class="order-btn">Order Now</button>
+          </div>
+        </div>
+        <!-- Espresso 2 -->
+        <div class="menu-item" data-category="espresso" data-name="Double Espresso" data-price="5.00">
+          <img
+            src="https://media.istockphoto.com/id/1455924833/photo/fresh-double-espresso-coffee-and-coffee-beans-on-wooden-table.jpg?s=612x612&w=0&k=20&c=STuLBo05aQ5nHZxU2NnWAlaADSLCnZxzLIkED9sMEUM="
+            alt="Double Espresso"
+          />
+          <div class="item-info">
+            <h3 class="item-title">Double Espresso</h3>
+            <p class="item-desc">
+              A robust double shot for an extra kick.
+            </p>
+            <button class="order-btn">Order Now</button>
+          </div>
+        </div>
+        <!-- Americano -->
+        <div class="menu-item" data-category="espresso" data-name="Americano" data-price="4.50">
+          <img
+            src="https://media.istockphoto.com/id/1030018926/photo/coffee-americano-it-made-from-espresso-and-hot-water-uk.jpg?s=612x612&w=0&k=20&c=trsNtjalA6r9eGka845eO1nYOP0yogvLWqBAg-jsBlM="
+            alt="Americano"
+          />
+          <div class="item-info">
+            <h3 class="item-title">Americano</h3>
+            <p class="item-desc">
+              Espresso with hot water for a smooth, rich flavor.
+            </p>
+            <button class="order-btn">Order Now</button>
+          </div>
+        </div>
+        <!-- Chocolate Croissant -->
+        <div class="menu-item" data-category="bread" data-name="Chocolate Croissant" data-price="3.00">
+          <img
+            src="/assets/chocolatecroissant.jpg"
+            alt="Chocolate Croissant"
+          />
+          <div class="item-info">
+            <h3 class="item-title">Chocolate Croissant</h3>
+            <p class="item-desc">
+              A buttery croissant filled with rich chocolate.
+            </p>
+            <button class="order-btn">Order Now</button>
+          </div>
+        </div>
+        <!-- Avocado Toast -->
+        <div class="menu-item" data-category="bread" data-name="Avocado Toast" data-price="4.00">
+          <img
+            src="/assets/avocadotoast.jpg"
+            alt="Avocado Toast"
+          />
+          <div class="item-info">
+            <h3 class="item-title">Avocado Toast</h3>
+            <p class="item-desc">
+              Fresh avocado on toasted sourdough bread.
+            </p>
+            <button class="order-btn">Order Now</button>
+          </div>
+        </div>
+        <!-- Iced Caramel Macchiato -->
+        <div class="menu-item" data-category="espresso" data-name="Iced Caramel Macchiato" data-price="5.00">
+          <img
+            src="/assets/icedcaramelmacchiato.jpg"
+            alt="Iced Caramel Macchiato"
+          />
+          <div class="item-info">
+            <h3 class="item-title">Iced Caramel Macchiato</h3>
+            <p class="item-desc">
+              A sweet and creamy iced espresso drink.
+            </p>
+            <button class="order-btn">Order Now</button>
+          </div>
+        </div>
+        <!-- Frappe 1 -->
+        <div class="menu-item" data-category="frappe" data-name="Caramel Frappe" data-price="5.50">
+          <img
+            src="https://www.allrecipes.com/thmb/cb1Zf7kTp5QkiMA0GBj8ppsrZx8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/235850-starbucks-caramel-frappuccino-copycat-recipe-DDMFS-4x3-227a1e47f46643dcb4708e775a250bca.jpg"
+            alt="Caramel Frappe"
+          />
+          <div class="item-info">
+            <h3 class="item-title">Caramel Frappe</h3>
+            <p class="item-desc">
+              A refreshing blended coffee with a hint of caramel.
+            </p>
+            <button class="order-btn">Order Now</button>
+          </div>
+        </div>
+        <!-- Frappe 2 (New) -->
+        <div class="menu-item" data-category="frappe" data-name="Mocha Frappe" data-price="5.75">
+          <img
+            src="https://www.nescafe.com/ph/sites/default/files/2024-05/nescafe-gold-dark-mocha-frappe-recipe-banner_1066x1066.jpg"
+            alt="Mocha Frappe"
+          />
+          <div class="item-info">
+            <h3 class="item-title">Mocha Frappe</h3>
+            <p class="item-desc">
+              Indulge in a chocolatey frappe with a perfect coffee blend.
+            </p>
+            <button class="order-btn">Order Now</button>
+          </div>
+        </div>
+        <!-- Brewed 1 -->
+        <div class="menu-item" data-category="brewed" data-name="Brewed Coffee" data-price="3.50">
+          <img
+            src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+            alt="Brewed Coffee"
+          />
+          <div class="item-info">
+            <h3 class="item-title">Brewed Coffee</h3>
+            <p class="item-desc">
+              Classic brewed coffee, aromatic and smooth.
+            </p>
+            <button class="order-btn">Order Now</button>
+          </div>
+        </div>
+        <!-- Brewed 2 (New) -->
+        <div class="menu-item" data-category="brewed" data-name="Iced Coffee" data-price="3.75">
+          <img
+            src="https://media.istockphoto.com/id/1353598939/photo/fresh-coffee.jpg?s=612x612&w=0&k=20&c=muFDk5viP4EakM4Za7LiNwhhTpxzEbaevznO_Nr7HBo="
+            alt="Iced Coffee"
+          />
+          <div class="item-info">
+            <h3 class="item-title">Iced Coffee</h3>
+            <p class="item-desc">
+              Cool and refreshing, perfect for warm days.
+            </p>
+            <button class="order-btn">Order Now</button>
+          </div>
+        </div>
+        <!-- Bread 1 -->
+        <div class="menu-item" data-category="bread" data-name="Freshly Baked Bread" data-price="2.50">
+          <img
+            src="https://images.ctfassets.net/3s5io6mnxfqz/5rHDszmXO2kKZHFF2yIqva/e8801ea67aeef00f6f6dcaac2d531aae/AdobeStock_205724119.jpeg"
+            alt="Freshly Baked Bread"
+          />
+          <div class="item-info">
+            <h3 class="item-title">Freshly Baked Bread</h3>
+            <p class="item-desc">
+              Crusty on the outside and soft on the inside—perfect with coffee.
+            </p>
+            <button class="order-btn">Order Now</button>
+          </div>
+        </div>
+        <!-- Bread 2 (New) -->
+        <div class="menu-item" data-category="bread" data-name="Chocolate Muffin" data-price="3.25">
+          <img
+            src="https://media.istockphoto.com/id/537698587/photo/homemade-dark-chocolate-muffins.jpg?s=612x612&w=0&k=20&c=Ey6ImB29shcrNb-a1G_WmlcJmDa9bVVxLId_q1pZAWs="
+            alt="Chocolate Muffin"
+          />
+          <div class="item-info">
+            <h3 class="item-title">Chocolate Muffin</h3>
+            <p class="item-desc">
+              A sweet treat bursting with chocolatey goodness.
+            </p>
+            <button class="order-btn">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floating Cart Icon -->
+    <div id="cart-icon" onclick="goToOrderPage()">
+      <i class="ri-shopping-cart-2-line"></i>
+      <span id="cart-count">0</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3 class="footer-logo">Mr Coffee</h3>
+            <p class="footer-text">Crafting perfect moments, one cup at a time.</p>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html" class="footer-link">Home</a></li>
+              <li><a href="menu.html" class="footer-link">Menu</a></li>
+              <li><a href="rewards.html" class="footer-link">Rewards</a></li>
+              <li><a href="about_us.html" class="footer-link">About Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-heading">Contact</h4>
+            <ul class="footer-contact">
+              <li>123 Coffee Street</li>
+              <li>New York, NY 10001</li>
+              <li>Tel: (555) 123-4567</li>
+              <li>Email: info@mrcoffee.com</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-heading">Follow Us</h4>
+            <div class="footer-social">
+              <a href="https://www.facebook.com" class="footer-social-link"
+                ><i class="ri-facebook-fill"></i
+              ></a>
+              <a href="https://x.com/home" class="footer-social-link"
+                ><i class="ri-twitter-fill"></i
+              ></a>
+              <a href="https://www.instagram.com" class="footer-social-link"
+                ><i class="ri-instagram-fill"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Mr Coffee. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  
+    <!-- Menu Page JS -->
+    <script src="menu.js"></script>
+  </body>
+</html>

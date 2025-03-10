@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mr Coffee - Premium Coffee Experience</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Order Page CSS -->
+    <link rel="stylesheet" href="order.css" />
+  </head>
+  <body class="site-body">
+    <!-- Navigation -->
+    <nav class="site-nav">
+      <div class="container nav-inner">
+        <div class="nav-logo">
+          <a href="index.html" class="logo">
+            <img src="assets/mrcoffeelogo.jpeg" alt="Mr Coffee Logo" class="logo-img" />
+            Mr Coffee
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="rewards.html" class="nav-link">Rewards</a>
+          <a href="about_us.html" class="nav-link">About Us</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="order.html" class="nav-button">Order Now</a>
+        </div>
+        <button id="mobile-menu-button" class="mobile-menu-btn">
+          <i class="ri-menu-line menu-icon"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="rewards.html" class="mobile-nav-link">Rewards</a>
+        <a href="about_us.html" class="mobile-nav-link">About Us</a>
+        <a href="menu.html" class="mobile-nav-link">Menu</a>
+        <a href="order.html" class="mobile-nav-button">Order Now</a>
+      </div>
+    </div>
+
+    <!-- Order Section -->
+    <section class="order-section">
+      <div class="container">
+        <h1 class="section-title">Your Cart</h1>
+        <div id="cart-items"></div>
+        <h2 id="cart-total">Total: $0.00</h2>
+      </div>
+
+      <div class="container">
+        <h1 class="section-title">Place Your Order</h1>
+        <form id="checkoutForm" class="order-form">
+          <!-- Name -->
+          <div class="form-group wave-group">
+            <input
+              type="text"
+              id="name"
+              class="input"
+              name="name"
+              required
+            />
+            <label for="name" class="label">
+              <span class="label-char" style="--index:0">N</span>
+              <span class="label-char" style="--index:1">a</span>
+              <span class="label-char" style="--index:2">m</span>
+              <span class="label-char" style="--index:3">e</span>
+            </label>
+            <span class="bar"></span>
+            <small class="error-message" id="nameError"></small>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group wave-group">
+            <input
+              type="text"
+              id="email"
+              class="input"
+              name="email"
+              required
+            />
+            <label for="email" class="label">
+              <span class="label-char" style="--index:0">E</span>
+              <span class="label-char" style="--index:1">m</span>
+              <span class="label-char" style="--index:2">a</span>
+              <span class="label-char" style="--index:3">i</span>
+              <span class="label-char" style="--index:4">l</span>
+            </label>
+            <span class="bar"></span>
+            <small class="error-message" id="emailError"></small>
+          </div>
+
+          <!-- Address -->
+          <div class="form-group">
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="3"></textarea>
+            <small class="error-message" id="addressError"></small>
+          </div>
+
+          <!-- Final Submit -->
+          <div class="form-group">
+            <button type="submit" class="order-btn">Confirm Order</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="order.js"></script>
+  </body>
+
+
+</html>

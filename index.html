@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mr Coffee - Premium Coffee Experience</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Home Page CSS -->
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body class="site-body">
+    <!-- Navigation -->
+    <nav class="site-nav">
+      <div class="container">
+        <div class="nav-inner">
+          <div class="nav-logo">
+            <a href="index.html" class="logo">
+              <img src="/assets/mrcoffeelogo.jpeg" alt="Mr Coffee Logo" class="logo-img" />
+              Mr Coffee
+            </a>
+          </div>
+          <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="rewards.html" class="nav-link">Rewards</a>
+            <a href="about_us.html" class="nav-link">About Us</a>
+            <a href="menu.html" class="nav-link">Menu</a>
+            <a href="order.html" class="nav-button">Order Now</a>
+          </div>
+          <button id="mobile-menu-button" class="mobile-menu-btn">
+            <i class="ri-menu-line menu-icon"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="mobile-menu">
+      <div class="mobile-menu-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="rewards.html" class="mobile-nav-link">Rewards</a>
+        <a href="about_us.html" class="mobile-nav-link">About Us</a>
+        <a href="menu.html" class="mobile-nav-link">Menu</a>
+        <a href="order.html" class="mobile-nav-button">Order Now</a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-bg">
+          <img
+            src="/assets/coffeeshop.jpg"
+            alt="Coffee Shop Interior"
+          />
+          <div class="hero-overlay"></div> <!-- Overlay to reduce exposure -->
+        </div>
+        <div class="container hero-content">
+          <h1 class="hero-title">
+            Crafting Perfect Moments, One Cup at a Time <!-- Slogan -->
+          </h1>
+          <p class="hero-text">
+            Experience the artistry of premium coffee, where every sip tells a
+            story of passion and perfection.
+          </p>
+          <a href="menu.html" class="hero-button">Explore Our Menu</a> <!-- Link to Menu Section -->
+        </div>
+      </section>
+
+      <!-- Top 5 Most Ordered -->
+      <section class="most-ordered" style="margin-top: 80px;">
+        <div class="container">
+          <h2>Most Ordered</h2>
+          <div class="products-grid">
+            <!-- Product 1 -->
+            <div
+              class="product-card"
+              data-name="Cappuccino"
+              data-price="4.50"
+            >
+              <img
+                src="/assets/cappucino.jpg"
+                alt="Cappuccino"
+              />
+              <div class="product-info">
+                <h3 class="product-title">Cappuccino</h3>
+                <p class="product-price">$4.50</p>
+                <button class="product-button">Order Now</button>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div
+              class="product-card"
+              data-name="Iced Caramel Macchiato"
+              data-price="5.50"
+            >
+              <img
+                src="/assets/icedcaramelmacchiato.jpg"
+                alt="Iced Caramel Macchiato"
+              />
+              <div class="product-info">
+                <h3 class="product-title">Iced Caramel Macchiato</h3>
+                <p class="product-price">$5.50</p>
+                <button class="product-button">Order Now</button>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div
+              class="product-card"
+              data-name="Mochalatte"
+              data-price="5.00"
+            >
+              <img
+                src="/assets/mochalatte.jpg"
+                alt="Mochalatte"
+              />
+              <div class="product-info">
+                <h3 class="product-title">Mochalatte</h3>
+                <p class="product-price">$5.00</p>
+                <button class="product-button">Order Now</button>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div
+              class="product-card"
+              data-name="Chocolate Croissant"
+              data-price="3.50"
+            >
+              <img
+                src="/assets/chocolatecroissant.jpg"
+                alt="Chocolate Croissant"
+              />
+              <div class="product-info">
+                <h3 class="product-title">Chocolate Croissant</h3>
+                <p class="product-price">$3.50</p>
+                <button class="product-button">Order Now</button>
+              </div>
+            </div>
+            <!-- Product 5 -->
+            <div
+              class="product-card"
+              data-name="Avocado Toast"
+              data-price="8.50"
+            >
+              <img
+                src="/assets/avocadotoast.jpg"
+                alt="Avocado Toast"
+              />
+              <div class="product-info">
+                <h3 class="product-title">Avocado Toast</h3>
+                <p class="product-price">$8.50</p>
+                <button class="product-button">Order Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Floating Cart Icon (Bottom Right Yellow) -->
+      <div id="cart-icon" onclick="goToOrderPage()">
+        <i class="ri-shopping-cart-2-line"></i>
+        <span id="cart-count">0</span>
+      </div>
+
+      <!-- Rewards Section -->
+      <section class="rewards">
+        <div class="container rewards-container">
+          <div class="rewards-text-block">
+            <h2 class="rewards-title">Join Our Rewards Program</h2>
+            <p class="rewards-text">
+              Earn points with every purchase and enjoy exclusive benefits, free
+              drinks, and special offers. Download our app today!
+            </p>
+            <!-- Link to reward section -->
+            <a href="rewards.html" class="rewards-button">Learn More</a>
+          </div>
+          <div class="rewards-image">
+            <img
+              src="/assets/stockui.jpg"
+              alt="Rewards Program"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Founder Section -->
+      <section class="founder">
+        <div class="container founder-container">
+          <div class="founder-image">
+            <img
+              src="/assets/susantoliman.jpg"
+              alt="CEO Portrait"
+            />
+          </div>
+          <div class="founder-info">
+            <h2 class="founder-title">Meet Our CEO</h2>
+            <h3 class="founder-name">Susanto Liman</h3>
+            <p class="founder-text">
+              Susanto Liman, the visionary behind Mr.Coffee, has over 25 years of experience in the coffee industry. 
+              With an unwavering passion for creating the perfect brew and a belief that every cup brings people together, 
+              he transformed a humble coffee cart into a cherished community haven. His journey is defined by creativity, resilience, 
+              and the art of connection—values that continue to inspire every cup served at Mr.Coffee.
+            </p>
+            <a href="about_us.html" class="founder-button">Our Story</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3 class="footer-logo">Mr Coffee</h3>
+            <p class="footer-text">Crafting perfect moments, one cup at a time.</p>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html" class="footer-link">Home</a></li>
+              <li><a href="menu.html" class="footer-link">Menu</a></li>
+              <li><a href="rewards.html" class="footer-link">Rewards</a></li>
+              <li><a href="about_us.html" class="footer-link">About Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-heading">Contact</h4>
+            <ul class="footer-contact">
+              <li>123 Coffee Street</li>
+              <li>New York, NY 10001</li>
+              <li>Tel: (555) 123-4567</li>
+              <li>Email: info@mrcoffee.com</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-heading">Follow Us</h4>
+            <div class="footer-social">
+              <a href="https://www.facebook.com" class="footer-social-link"
+                ><i class="ri-facebook-fill"></i
+              ></a>
+              <a href="https://x.com/home" class="footer-social-link"
+                ><i class="ri-twitter-fill"></i
+              ></a>
+              <a href="https://www.instagram.com" class="footer-social-link"
+                ><i class="ri-instagram-fill"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Mr Coffee. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Home Page Script -->
+    <script src="home.js"></script>
+  </body>
+</html>
