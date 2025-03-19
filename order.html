@@ -64,7 +64,7 @@
       <div class="container">
         <h1 class="section-title">Place Your Order</h1>
         <form id="checkoutForm" class="order-form">
-          <!-- Name -->
+          <!-- Name (Text) -->
           <div class="form-group wave-group">
             <input
               type="text"
@@ -83,7 +83,7 @@
             <small class="error-message" id="nameError"></small>
           </div>
 
-          <!-- Email -->
+          <!-- Email (Text) -->
           <div class="form-group wave-group">
             <input
               type="text"
@@ -103,14 +103,46 @@
             <small class="error-message" id="emailError"></small>
           </div>
 
-          <!-- Address -->
+          <!-- Address (Textarea) -->
           <div class="form-group">
             <label for="address">Address</label>
             <textarea id="address" name="address" rows="3"></textarea>
             <small class="error-message" id="addressError"></small>
           </div>
 
-          <!-- Final Submit -->
+          <!-- Payment Method (Radio) -->
+          <div class="form-group payment-method">
+            <label class="radio-label">Payment Method</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="paymentMethod" value="Debit Card" />
+                <span class="radio-text">E-wallet (BCA, BRI, dll)</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="paymentMethod" value="Gopay" />
+                <span class="radio-text">Gopay</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="paymentMethod" value="Cash" />
+                <span class="radio-text">Cash</span>
+              </label>
+            </div>
+            <small class="error-message" id="paymentError"></small>
+          </div>
+
+          <!-- Shipping Type (Select) -->
+          <div class="form-group shipping-type">
+            <label for="shippingType">Shipping Type</label>
+            <select id="shippingType" name="shippingType">
+              <option value="">Select shipping</option>
+              <option value="Standard">Standard (3-5 days)</option>
+              <option value="Express">Express (1-2 days)</option>
+              <option value="Overnight">Overnight</option>
+            </select>
+            <small class="error-message" id="shippingError"></small>
+          </div>
+
+          <!-- Final Submit Button -->
           <div class="form-group">
             <button type="submit" class="order-btn">Confirm Order</button>
           </div>
@@ -120,6 +152,4 @@
 
     <script src="order.js"></script>
   </body>
-
-
 </html>
