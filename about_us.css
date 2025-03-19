@@ -72,27 +72,24 @@
     opacity: 0.9;
   }
   
-  /* Mobile Navigation */
-  .mobile-menu-btn-container {
+  /* Mobile Menu */
+  .mobile-menu-btn {
     display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .menu-icon {
+    color: #555;
   }
   @media (max-width: 768px) {
     .nav-links {
       display: none;
     }
-    .mobile-menu-btn-container {
+    .mobile-menu-btn {
       display: block;
     }
-  }
-  .mobile-menu-btn {
-    background: none;
-    border: none;
-    color: #555;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  .menu-icon {
-    vertical-align: middle;
   }
   .mobile-menu {
     display: none;
@@ -102,19 +99,23 @@
     right: 0;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    z-index: 49;
+    z-index: 99;
   }
   .mobile-menu.active {
     display: block;
   }
-  .mobile-menu-links a {
-    display: block;
+  .mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-nav-link {
     padding: 12px 16px;
     border-bottom: 1px solid #eee;
     color: #555;
     text-decoration: none;
   }
-  .mobile-menu-links a:hover, .mobile-menu-links a.active {
+  .mobile-nav-link:hover,
+  .mobile-nav-link.active {
     color: #4A2C2A;
   }
   .mobile-nav-button {
@@ -130,10 +131,10 @@
   .mobile-nav-button:hover {
     opacity: 0.9;
   }
-
   .mobile-nav-link:hover{
     background-color: grey;
   }
+
   
   /* Section Titles */
   .section-title {
