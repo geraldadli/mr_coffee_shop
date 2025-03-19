@@ -94,9 +94,9 @@ const itemImages = {
   "Iced Coffee":
     "https://media.istockphoto.com/id/1353598939/photo/fresh-coffee.jpg?s=612x612&w=0&k=20&c=muFDk5viP4EakM4Za7LiNwhhTpxzEbaevznO_Nr7HBo=", // Keeping the original URL
   "Freshly Baked Bread":
-    "/assets/freshlybakedbread.jpg",
+    "https://images.ctfassets.net/3s5io6mnxfqz/5rHDszmXO2kKZHFF2yIqva/e8801ea67aeef00f6f6dcaac2d531aae/AdobeStock_205724119.jpeg",
   "Chocolate Muffin":
-    "/assets/chocolatemuffin.jpg"
+    "https://media.istockphoto.com/id/537698587/photo/homemade-dark-chocolate-muffins.jpg?s=612x612&w=0&k=20&c=Ey6ImB29shcrNb-a1G_WmlcJmDa9bVVxLId_q1pZAWs="
 };
 
   
