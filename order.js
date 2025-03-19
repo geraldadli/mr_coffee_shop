@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
   displayCartItems();
   updateCartTotal();
 
+  // Setup shipping type change event to recalc total
+  const shippingSelect = document.getElementById("shippingType");
+  shippingSelect.addEventListener("change", updateCartTotal);
+
   // Setup the checkout form validation
   const checkoutForm = document.getElementById("checkoutForm");
   checkoutForm.addEventListener("submit", function (event) {
@@ -73,8 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // 6) Total price must be > 0
-    const totalValue = getCartTotal();
-    if (totalValue <= 0) {
+    const finalTotal = calculateFinalTotal();
+    if (finalTotal <= 0) {
       alert("Cart is empty or total price is zero. Please add items.");
       isValid = false;
     }
@@ -94,6 +98,13 @@ const addonCosts = {
   "Extra Shot": 1.0,
   "Whipped Cream": 0.5,
   "Chocolate Syrup": 0.75
+};
+
+// Shipping costs
+const shippingCosts = {
+  "Standard": 5,
+  "Express": 10,
+  "Overnight": 20
 };
 
 // Map item names to images
@@ -167,6 +178,7 @@ function displayCartItems() {
   cartItemsDiv.innerHTML = html;
 }
 
+/** Increments item quantity by 1. */
 function incrementQuantity(index) {
   let cart = JSON.parse(localStorage.getItem("mrCoffeeCart")) || [];
   cart[index].quantity++;
@@ -175,6 +187,7 @@ function incrementQuantity(index) {
   updateCartTotal();
 }
 
+/** Decrements item quantity by 1, removing if it hits 0. */
 function decrementQuantity(index) {
   let cart = JSON.parse(localStorage.getItem("mrCoffeeCart")) || [];
   if (cart[index].quantity > 1) {
@@ -187,6 +200,7 @@ function decrementQuantity(index) {
   updateCartTotal();
 }
 
+/** Toggles an add-on for a specific item in the cart. */
 function toggleAddon(index, addon, checked) {
   let cart = JSON.parse(localStorage.getItem("mrCoffeeCart")) || [];
   if (checked) {
@@ -200,25 +214,34 @@ function toggleAddon(index, addon, checked) {
   updateCartTotal();
 }
 
-/** Returns the total cost of all items + add-ons in the cart. */
+/** Returns the base cart total (items + add-ons). */
 function getCartTotal() {
   let cart = JSON.parse(localStorage.getItem("mrCoffeeCart")) || [];
   let total = 0;
   cart.forEach(item => {
-    // Base cost = item.price * item.quantity
     let itemTotal = item.price * item.quantity;
-
-    // Each add-on cost * quantity
     item.addons.forEach(addon => {
       itemTotal += (addonCosts[addon] || 0) * item.quantity;
     });
-
     total += itemTotal;
   });
   return total;
 }
 
+/** Returns the final total including shipping. */
+function calculateFinalTotal() {
+  const baseTotal = getCartTotal();
+  const shippingSelect = document.getElementById("shippingType");
+  const shippingType = shippingSelect.value;
+  let shippingCost = 0;
+  if (shippingCosts[shippingType]) {
+    shippingCost = shippingCosts[shippingType];
+  }
+  return baseTotal + shippingCost;
+}
+
+/** Updates the displayed total. Called after cart changes or shipping changes. */
 function updateCartTotal() {
-  const total = getCartTotal();
-  document.getElementById("cart-total").innerText = `Total: $${total.toFixed(2)}`;
+  const finalTotal = calculateFinalTotal();
+  document.getElementById("cart-total").innerText = `Total: $${finalTotal.toFixed(2)}`;
 }
